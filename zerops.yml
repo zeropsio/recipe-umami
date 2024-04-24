@@ -6,7 +6,7 @@ zerops:
         - | 
           git clone https://github.com/umami-software/umami.git
           cd umami
-          yarn install
+          yarn install --frozen-lockfile
           yarn build-docker
           yarn add npm-run-all dotenv prisma semver
       deploy: 
