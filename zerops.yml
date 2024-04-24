@@ -25,6 +25,10 @@ zerops:
       prepareCommands:
         - npm install -g yarn@1.22.10 --force
       start: NODE_ENV=production yarn start-docker
+      healthCheck:
+        httpGet:
+          port: 3000
+          path: /api/heartbeat
     envVariables:
       DATABASE_TYPE: postgresql
       DATABASE_URL: ${db_connectionString}/${db_hostname}
