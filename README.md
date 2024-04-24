@@ -1,6 +1,7 @@
 # Zerops x Umami
 
 ```yaml
+#yamlPreprocessor=on
 project:
   name: umami
 
@@ -17,4 +18,6 @@ services:
     enableSubdomainAccess: true
     buildFromGit: https://github.com/zeropsio/recipe-umami
     minContainers: 1
+    envSecrets:
+      APP_SECRET: <@generateRandomString(<64>)>
 ```
