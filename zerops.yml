@@ -20,6 +20,8 @@ zerops:
         - ./umami/~yarn.lock
         - ./umami/~node_modules/
     run: 
+      initCommands:
+        - yarn check
       start: yarn start-docker
     envVariables:
       DATABASE_TYPE: postgresql
