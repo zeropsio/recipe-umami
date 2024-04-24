@@ -13,4 +13,5 @@ zerops:
       start: yarn start
     envVariables:
       DATABASE_URL: ${db_connectionString}/${db_hostname}
+      DATABASE_TYPE: postgresql
     
