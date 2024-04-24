@@ -7,7 +7,7 @@ zerops:
           git clone https://github.com/umami-software/umami.git
           cd umami
           git checkout tags/v2.11.2
-          yarn add npm-run-all dotenv prisma semver
+          yarn add npm-run-all dotenv semver
           yarn install
           yarn build-docker
           ls -la
