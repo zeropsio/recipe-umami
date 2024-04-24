@@ -4,20 +4,12 @@ zerops:
       base: nodejs@18
       buildCommands:
         - | 
-          echo "running git clone"
           git clone https://github.com/umami-software/umami.git
-          echo "git clone done"
-          ls -la
+          git checkout tags/v2.11.2
           cd umami
-          echo "installing"
-          yarn install --immutable
-          echo "install done"
-          echo "building"
-          yarn build-docker
-          echo "build done"
-          echo "adding extra deps"
           yarn add npm-run-all dotenv prisma semver
-          echo "extra deps add done"
+          yarn install
+          yarn build-docker
           ls -la
       deploy: 
         - ./umami/.next/standalone/~
