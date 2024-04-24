@@ -3,6 +3,7 @@
 ```yaml
 project:
   name: umami
+
 services:
   - hostname: db
     type: postgresql@16
