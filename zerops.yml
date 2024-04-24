@@ -4,14 +4,13 @@ zerops:
       base: nodejs@18
       buildCommands:
         - | 
-          yarn -v
           git clone https://github.com/umami-software/umami.git
           cd umami
           git checkout tags/v2.11.2
-          yarn add npm-run-all dotenv semver
+          yarn policies set-version 1.22.10
           yarn install
           yarn build-docker
-          ls -la
+          yarn add npm-run-all dotenv semver prisma
       deploy: 
         - ./umami/.next/standalone/~
         - ./umami/~.next/static/
