@@ -18,7 +18,11 @@ zerops:
         - ./umami/~package.json
     run: 
       prepareCommands:
-        - npm install -g npm-run-all dotenv prisma semver
+        - | 
+          mkdir -p /var/www
+          cd /var/www
+          echo '{}' > package.json
+          yarn add npm-run-all dotenv prisma semver
       start: npm run start-docker
     envVariables:
       DATABASE_TYPE: postgresql
