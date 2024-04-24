@@ -4,6 +4,7 @@ zerops:
       base: nodejs@18
       buildCommands:
         - | 
+          yarn -v
           git clone https://github.com/umami-software/umami.git
           cd umami
           git checkout tags/v2.11.2
