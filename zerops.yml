@@ -8,12 +8,7 @@ zerops:
           cd umami
           yarn install
           yarn build-docker
-          rm -rf node_modules
-          mv package.json package.json.backup
-          echo '{}' > package.json
           yarn add npm-run-all dotenv prisma semver
-          rm package.json
-          mv package.json.backup package.json
       deploy: 
         - ./umami/~.next/standalone/
         - ./umami/~.next/static/
