@@ -5,8 +5,8 @@ zerops:
       buildCommands:
         - | 
           git clone https://github.com/umami-software/umami.git
-          git checkout tags/v2.11.2
           cd umami
+          git checkout tags/v2.11.2
           yarn add npm-run-all dotenv prisma semver
           yarn install
           yarn build-docker
