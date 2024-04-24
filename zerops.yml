@@ -8,7 +8,7 @@ zerops:
           cd umami
           yarn install
           yarn build
-      deploy: ./
+      deploy: ./umami/~
     run: 
       start: yarn start
     envVariables:
