@@ -1,6 +1,6 @@
 # Zerops x Umami
 
-https://umami.is on Zerops
+https://umami.is on https://zerops.io
 
 ```yaml
 #yamlPreprocessor=on
