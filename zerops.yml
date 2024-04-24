@@ -14,8 +14,8 @@ zerops:
         - ./umami/~public/
         - ./umami/~scripts/
         - ./umami/~prisma/
-        - ./umami/next.config.js
-        - ./umami/package.json
+        - ./umami/~next.config.js
+        - ./umami/~package.json
     run: 
       prepareCommands:
         - yarn add npm-run-all dotenv prisma semver
