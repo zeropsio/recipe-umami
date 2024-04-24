@@ -10,5 +10,5 @@ zerops:
     run: 
       start: yarn start
     envVariables:
-      DATABASE_URL=${db_connectionString}/${db_hostname}
+      DATABASE_URL: ${db_connectionString}/${db_hostname}
     
