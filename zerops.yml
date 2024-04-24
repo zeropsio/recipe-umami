@@ -17,6 +17,7 @@ zerops:
         - ./umami/~prisma/
         - ./umami/~next.config.js
         - ./umami/~package.json
+        - ./umami/~yarn.lock
         - ./umami/~node_modules/
     run: 
       start: yarn start-docker
