@@ -24,9 +24,8 @@ zerops:
     run:
       prepareCommands:
         - npm install -g yarn@1.22.10 --force
-      start: yarn start-docker
+      start: NODE_ENV=production yarn start-docker
     envVariables:
       DATABASE_TYPE: postgresql
       DATABASE_URL: ${db_connectionString}/${db_hostname}
-      NODE_ENV: production
       NEXT_TELEMETRY_DISABLED: "1"
