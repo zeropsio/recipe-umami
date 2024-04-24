@@ -5,13 +5,12 @@ zerops:
       buildCommands:
         - git clone https://github.com/umami-software/umami.git
         - npm install -g yarn@1.22.10 --force
-        - yarn -v
         - | 
           cd umami
           git checkout tags/v2.11.2
           yarn install --frozen-lockfile
           yarn build-docker
-          yarn add npm-run-all dotenv semver prisma
+          yarn add npm-run-all
       deploy: 
         - ./umami/.next/standalone/~
         - ./umami/~.next/static/
@@ -25,8 +24,6 @@ zerops:
     run:
       prepareCommands:
         - npm install -g yarn@1.22.10 --force
-      initCommands:
-        - yarn -v
       start: yarn start-docker
     envVariables:
       DATABASE_TYPE: postgresql
