@@ -19,7 +19,7 @@ zerops:
     run: 
       prepareCommands:
         - npm install -g npm-run-all dotenv prisma semver
-      start: yarn start-docker
+      start: npm run start-docker
     envVariables:
       DATABASE_TYPE: postgresql
       DATABASE_URL: ${db_connectionString}/${db_hostname}
