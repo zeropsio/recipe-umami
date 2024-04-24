@@ -3,9 +3,11 @@ zerops:
     build:
       base: nodejs@18
       buildCommands:
-        - git clone https://github.com/umami-software/umami.git ./
-        - yarn install
-        - yarn build
+        - git clone https://github.com/umami-software/umami.git
+        - | 
+          cd umami
+          yarn install
+          yarn build
       deploy: ./
     run: 
       start: yarn start
