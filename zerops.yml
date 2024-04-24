@@ -10,7 +10,7 @@ zerops:
           yarn build-docker
           yarn add npm-run-all dotenv prisma semver
       deploy: 
-        - ./umami/~.next/standalone/
+        - ./umami/.next/standalone/~
         - ./umami/~.next/static/
         - ./umami/~public/
         - ./umami/~scripts/
@@ -19,9 +19,7 @@ zerops:
         - ./umami/~package.json
         - ./umami/~yarn.lock
         - ./umami/~node_modules/
-    run: 
-      initCommands:
-        - yarn check
+    run:
       start: yarn start-docker
     envVariables:
       DATABASE_TYPE: postgresql
