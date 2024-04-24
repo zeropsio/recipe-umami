@@ -4,7 +4,7 @@ zerops:
       base: nodejs@18
       buildCommands:
         - git clone https://github.com/umami-software/umami.git
-        - npm install -g yarn@1.22.10
+        - npm install -g yarn@1.22.10 --force
         - yarn -v
         - | 
           cd umami
@@ -24,7 +24,7 @@ zerops:
         - ./umami/~node_modules/
     run:
       prepareCommands:
-        - npm install -g yarn@1.22.10
+        - npm install -g yarn@1.22.10 --force
       initCommands:
         - yarn -v
       start: yarn start-docker
