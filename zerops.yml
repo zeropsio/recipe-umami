@@ -10,7 +10,7 @@ zerops:
           ls -la
           cd umami
           echo "installing"
-          yarn install --frozen-lockfile
+          yarn install --immutable
           echo "install done"
           echo "building"
           yarn build-docker
