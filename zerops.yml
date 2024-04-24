@@ -4,12 +4,21 @@ zerops:
       base: nodejs@18
       buildCommands:
         - | 
+          echo "running git clone"
           git clone https://github.com/umami-software/umami.git
+          echo "git clone done"
+          ls -la
           cd umami
+          echo "installing"
           yarn install --frozen-lockfile
+          echo "install done"
+          echo "building"
           yarn build-docker
+          echo "build done"
+          echo "adding extra deps"
           yarn add npm-run-all dotenv prisma semver
-          ls && cd .. && ls
+          echo "extra deps add done"
+          ls -la
       deploy: 
         - ./umami/.next/standalone/~
         - ./umami/~.next/static/
