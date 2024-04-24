@@ -2,6 +2,12 @@
 
 ![Header Image](/umami-zerops.png)
 
+[Umami](https://umami.is/) makes it easy to collect, analyze, and understand your web data — while maintaining visitor privacy and data ownership. [Zerops](https://zerops.io) makes it easy to deploy Umami.
+
+## Prerequisities
+- Zerops account - [sign up here](https://app.zerops.io/registration) with up to $100 free credit
+
+Locate "Import project" in the menu in the top left corner and paste in following yaml:
 
 ```yaml
 #yamlPreprocessor=on
