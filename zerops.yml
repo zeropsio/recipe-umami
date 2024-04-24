@@ -17,13 +17,7 @@ zerops:
         - ./umami/~next.config.js
         - ./umami/~package.json
     run: 
-      prepareCommands:
-        - | 
-          mkdir -p /var/www
-          cd /var/www
-          echo '{}' > package.json
-          yarn add npm-run-all dotenv prisma semver
-      start: yarn start-docker
+      start: yarn add npm-run-all dotenv prisma semver && yarn start-docker
     envVariables:
       DATABASE_TYPE: postgresql
       DATABASE_URL: ${db_connectionString}/${db_hostname}
