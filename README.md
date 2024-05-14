@@ -5,7 +5,7 @@
 [Umami](https://umami.is/) makes it easy to collect, analyze, and understand your web data — while maintaining visitor privacy and data ownership. [Zerops](https://zerops.io) makes it easy to deploy Umami.
 
 ### Prerequisites
-- Zerops account - [sign up here](https://app.zerops.io/registration) with up to $100 free credit
+- Zerops account - [sign up here](https://app.zerops.io/registration) with up to $60 free credit
 
 
 ### Deploy your Umami to Zerops
