@@ -8,12 +8,12 @@ zerops:
       prepareCommands:
         - sudo apk add git
         - npm install -g yarn@1.22.10 --force
+        - npm install -g npm-run-all
       buildCommands:
         - git clone https://github.com/umami-software/umami.git
         - | 
           cd umami
           git checkout tags/v2.12.1
-          yarn add npm-run-all
           yarn install --frozen-lockfile
           yarn build-docker
       deploy: 
