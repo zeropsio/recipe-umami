@@ -16,18 +16,23 @@ zerops:
           git checkout tags/v2.12.1
           yarn install --frozen-lockfile
           yarn build-docker
+        - |
+          cd umami
+          mv ./node_modules ./dev_node_modules
+          yarn add npm-run-all dotenv prisma semver --no-lockfile
       deploy: 
         - umami/~next.config.js
         - umami/~public/
         - umami/~package.json
         - umami/~prisma/
         - umami/~scripts/
-        - umami/~.next/standalone/
+        - umami/.next/standalone/~
         - umami/~.next/static/
+        - umami/~node_modules/
     run:
+      base: nodejs@20
       prepareCommands:
         - npm install -g yarn@1.22.10 --force
-        - yarn global add npm-run-all dotenv prisma semver
       start: yarn start-docker
       ports: 
         - port: 3000
