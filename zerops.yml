@@ -28,7 +28,9 @@ zerops:
         - ./umami/~node_modules/
     run:
       prepareCommands:
-        - sudo npm install -g yarn@1.22.10 --force
+        - npm install -g yarn@1.22.10 --force
+      initCommands:
+        - which yarn
       start: yarn start-docker
       ports: 
         - port: 3000
