@@ -2,9 +2,11 @@ zerops:
   - setup: umami
     build:
       base: nodejs@20
+      prepareCommands:
+        - sudo apk add git
+        - sudo npm install -g yarn@1.22.10 --force
       buildCommands:
         - git clone https://github.com/umami-software/umami.git
-        - npm install -g yarn@1.22.10 --force
         - | 
           cd umami
           git checkout tags/v2.12.1
@@ -23,7 +25,7 @@ zerops:
         - ./umami/~node_modules/
     run:
       prepareCommands:
-        - npm install -g yarn@1.22.10 --force
+        - sudo npm install -g yarn@1.22.10 --force
       start: yarn start-docker
       ports: 
         - port: 3000
