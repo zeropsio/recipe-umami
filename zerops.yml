@@ -3,7 +3,6 @@ zerops:
     build:
       base: nodejs@20
       envVariables:
-        DATABASE_TYPE: ${RUNTIME_DATABASE_TYPE}
         DATABASE_URL: ${db_connectionString}/${db_hostname}
       prepareCommands:
         - sudo apk add git
@@ -43,6 +42,5 @@ zerops:
           path: /api/heartbeat
       envVariables:
         NODE_ENV: production
-        DATABASE_TYPE: postgresql
         DATABASE_URL: ${db_connectionString}/${db_hostname}
         NEXT_TELEMETRY_DISABLED: "1"
