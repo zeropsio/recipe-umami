@@ -7,7 +7,7 @@ zerops:
         DATABASE_URL: ${db_connectionString}/${db_hostname}
       prepareCommands:
         - sudo apk add git
-        - sudo npm install -g yarn@1.22.10 --force
+        - npm install -g yarn@1.22.10 --force
       buildCommands:
         - git clone https://github.com/umami-software/umami.git
         - | 
@@ -29,6 +29,9 @@ zerops:
     run:
       prepareCommands:
         - npm install -g yarn@1.22.10 --force
+      initCommands:
+        - which yarn
+        - whoami
       start: yarn start-docker
       ports: 
         - port: 3000
