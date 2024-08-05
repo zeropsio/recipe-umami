@@ -8,7 +8,7 @@ zerops:
       prepareCommands:
         - sudo apk add git
         - npm install -g yarn@1.22.10 --force
-        - npm install -g npm-run-all
+        - yarn global add npm-run-all
       buildCommands:
         - git clone https://github.com/umami-software/umami.git
         - | 
@@ -27,6 +27,7 @@ zerops:
     run:
       prepareCommands:
         - npm install -g yarn@1.22.10 --force
+        - yarn global add npm-run-all dotenv prisma semver
       start: yarn start-docker
       ports: 
         - port: 3000
