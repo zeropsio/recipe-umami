@@ -2,6 +2,9 @@ zerops:
   - setup: umami
     build:
       base: nodejs@20
+      envVariables:
+        DATABASE_TYPE: ${RUNTIME_DATABASE_TYPE}
+        DATABASE_URL: ${db_connectionString}/${db_hostname}
       prepareCommands:
         - sudo apk add git
         - sudo npm install -g yarn@1.22.10 --force
