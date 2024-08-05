@@ -1,6 +1,6 @@
 # Zerops x Umami
 
-![Header Image](/umami-zerops.png)
+![Umami](https://github.com/zeropsio/recipe-shared-assets/blob/main/covers/svg/recipe-umami.svg)
 
 [Umami](https://umami.is/) makes it easy to collect, analyze, and understand your web data — while maintaining visitor privacy and data ownership. [Zerops](https://zerops.io) makes it easy to deploy Umami.
 
