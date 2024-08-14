@@ -1,0 +1,16 @@
+project:
+  name: umami
+  tags:
+    - zerops-recipe
+
+services:
+  - hostname: db
+    type: postgresql@16
+    mode: NON_HA
+
+  - hostname: umami
+    type: nodejs@20
+    enableSubdomainAccess: true
+    buildFromGit: https://github.com/zeropsio/recipe-umami
+    envSecrets:
+      APP_SECRET: <@generateRandomString(<64>)>
