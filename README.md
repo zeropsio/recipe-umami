@@ -13,7 +13,7 @@ You can either click the deploy button to deploy directly on Zerops, or manually
 <br/>
 
 ## Recipe features
-- **.Unami** app running on a load balanced **Zerops Node.js** service
+- **Unami** app running on a load balanced **Zerops Node.js** service
 - Zerops **PostgreSQL 16** service as database
 - Utilization of Zerops' built-in **environment variables** system
 
