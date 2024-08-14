@@ -24,7 +24,7 @@ You can either click the deploy button to deploy directly on Zerops, or manually
 Base of the recipe is ready for production, the difference comes down to:
 
 - Use highly available version of the PostgreSQL database (change `mode` from `NON_HA` to `HA` in recipe YAML, `db` service section)
-- Set up database backups in the 'db' service details.
+- Set up database backups in the `db` service details.
 
 <br/>
 <br/>
